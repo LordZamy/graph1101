@@ -5,6 +5,11 @@
 
   var HEADER_FONT_SIZE = 42
 
+  // major groups
+  var carmackTimeline = new Group();
+  var romeroGroup = new Group();
+
+  /* Carmack Stuff */
   var carmackPath = new Path({
     segments: [
       [WIDTH / 12, 200], [WIDTH / 5, HEIGHT / 2],
@@ -14,8 +19,6 @@
     strokeWidth: 15,
     strokeCap: 'round'
   })
-
-    carmackPath.translate(0, -7.5)
 
   var carmackHeading = new PointText({
     point: [view.center.x, 100],
@@ -27,7 +30,13 @@
     justification: 'center'
   })
 
+  var carmackEvent = createEventCircle(WIDTH / 12, 200)
 
+  carmackTimeline.addChildren([carmackPath, carmackEvent])
+  carmackTimeline.translate(0, -7.5)
+  /* End Carmack Stuff */
+
+  /* Romero Stuff */
   var romeroHeading = new PointText({
     point: [view.center.x, HEIGHT - 100],
     content: 'John Romero',
@@ -49,6 +58,7 @@
   })
 
   romeroPath.translate(0, 7.5)
+  /* End Romero Stuff */
 
   var yHalfPath = new Path({
     segments: [[WIDTH / 2, 0], [WIDTH / 2, HEIGHT]],
@@ -59,4 +69,14 @@
     segments: [[0, HEIGHT / 2], [WIDTH, HEIGHT / 2]],
     selected: true
   })
+
+  function createEventCircle(x, y) {
+    return new Path.Circle({
+        center: [x, y],
+        radius: 10,
+        strokeColor: '#000000',
+        strokeWidth: 4,
+        fillColor: '#ffffff'
+    })
+  }
 })()
