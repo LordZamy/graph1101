@@ -3,13 +3,16 @@
   var WIDTH = $canvas.width();
   var HEIGHT = $canvas.height();
 
+  var HEADER_FONT_SIZE = 42
+
   var carmackPath = new Path({
     segments: [
       [WIDTH / 12, 200], [WIDTH / 5, HEIGHT / 2],
       [4 * WIDTH / 5, HEIGHT / 2], [11 * WIDTH / 12, 200]
     ],
     strokeColor: '#3a619e',
-    strokeWidth: 15
+    strokeWidth: 15,
+    strokeCap: 'round'
   })
 
     carmackPath.translate(0, -7.5)
@@ -20,7 +23,7 @@
     fillColor: '#000000',
     fontFamily: 'Bungee',
     fontWeight: 400,
-    fontSize: 42,
+    fontSize: HEADER_FONT_SIZE,
     justification: 'center'
   })
 
@@ -31,7 +34,7 @@
     fillColor: '#000000',
     fontFamily: 'Bungee',
     fontWeight: 400,
-    fontSize: 42,
+    fontSize: HEADER_FONT_SIZE,
     justification: 'center'
   })
 
@@ -41,7 +44,8 @@
       [4 * WIDTH / 5, HEIGHT / 2], [11 * WIDTH / 12, HEIGHT - 200]
     ],
     strokeColor: '#c74044',
-    strokeWidth: 15
+    strokeWidth: 15,
+    strokeCap: 'round'
   })
 
   romeroPath.translate(0, 7.5)
