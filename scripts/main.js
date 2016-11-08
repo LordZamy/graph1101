@@ -70,13 +70,42 @@
     selected: true
   })
 
+  var eventTriangle;
   function createEventCircle(x, y) {
-    return new Path.Circle({
+    var eventCircle = new Shape.Circle({
         center: [x, y],
         radius: 10,
         strokeColor: '#000000',
         strokeWidth: 4,
         fillColor: '#ffffff'
     })
+
+    eventCircle.on('mouseenter', function(e) {
+      var triangleRadius = 10
+      eventTriangle = new Path.RegularPolygon({
+        center: [this.position.x + 30, this.position.y + 3],
+        sides: 3,
+        radius: triangleRadius,
+        fillColor: 'black'
+      }).rotate(-90)
+
+      eventTextBox = new Shape.Rectangle({
+        from: [eventTriangle.position.x + triangleRadius - 2, eventTriangle.position.y - 50],
+        to: [eventTriangle.position.x + triangleRadius + 150, eventTriangle.position.y + 50],
+        fillColor: '#000000',
+        strokeColor: '#000000'
+      })
+
+      this.radius = 15
+    })
+
+    eventCircle.on('mouseleave', function(e) {
+      eventTriangle.remove()
+      eventTextBox.remove()
+
+      this.radius = 10
+    })
+
+    return eventCircle;
   }
 })()
