@@ -80,6 +80,8 @@
         fillColor: '#ffffff'
     })
 
+    $textbox = $('#text')
+
     eventCircle.on('mouseenter', function(e) {
       var triangleRadius = 10
       eventTriangle = new Path.RegularPolygon({
@@ -96,12 +98,20 @@
         strokeColor: '#000000'
       })
 
+      var bounds = eventTextBox.bounds;
+      $textbox.css({'top': bounds.y, 'left': bounds.x, 'height': bounds.height, 'width': bounds.width})
+      $textbox.text('John Carmack was born in 1972.')
+      $textbox.show()
+
+
       this.radius = 15
     })
 
     eventCircle.on('mouseleave', function(e) {
       eventTriangle.remove()
       eventTextBox.remove()
+
+      $textbox.hide();
 
       this.radius = 10
     })
