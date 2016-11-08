@@ -81,6 +81,7 @@
     })
 
     $textbox = $('#text')
+    $date = $('#date')
 
     eventCircle.on('mouseenter', function(e) {
       var triangleRadius = 10
@@ -100,7 +101,9 @@
 
       var bounds = eventTextBox.bounds;
       $textbox.css({'top': bounds.y, 'left': bounds.x, 'height': bounds.height, 'width': bounds.width})
-      $textbox.text('John Carmack was born in 1972.')
+      $date.text('1972')
+      $textbox.text('Carmack is born.')
+      $textbox.prepend($date)
       $textbox.show()
 
 
