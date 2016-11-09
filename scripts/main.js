@@ -7,7 +7,7 @@
 
   // major groups
   var carmackTimeline = new Group();
-  var romeroGroup = new Group();
+  var romeroTimeline = new Group();
 
   /* Carmack Stuff */
   var carmackPath = new Path({
@@ -30,9 +30,11 @@
     justification: 'center'
   })
 
-  var carmackEvent = createEventCircle(WIDTH / 12, 200)
+  var carmackEvents = [];
+  carmackEvents.push(createEventCircle(WIDTH / 12, 200, '1970', 'Carmack is born in Kansas.'))
 
-  carmackTimeline.addChildren([carmackPath, carmackEvent])
+  carmackTimeline.addChild(carmackPath)
+  carmackTimeline.addChildren(carmackEvents)
   carmackTimeline.translate(0, -7.5)
   /* End Carmack Stuff */
 
@@ -57,8 +59,19 @@
     strokeCap: 'round'
   })
 
-  romeroPath.translate(0, 7.5)
+  var romeroEvents = []
+  romeroEvents.push(createEventCircle(WIDTH / 12, HEIGHT - 200, '1967', 'Romero is born in Colorado.'))
+
+  romeroTimeline.addChild(romeroPath)
+  romeroTimeline.addChildren(romeroEvents)
+  romeroTimeline.translate(0, 7.5)
   /* End Romero Stuff */
+
+  /* Mutual Stuff */
+  var mutualEvents = []
+
+  mutualEvents.push(createEventCircle(WIDTH / 5, HEIGHT / 2, '1985', 'They get together and make love.'))
+  /* End Mutual Stuff */
 
   var yHalfPath = new Path({
     segments: [[WIDTH / 2, 0], [WIDTH / 2, HEIGHT]],
@@ -70,8 +83,8 @@
     selected: true
   })
 
-  var eventTriangle;
-  function createEventCircle(x, y) {
+  var eventTriangle, eventTextBox;
+  function createEventCircle(x, y, dateString, messageString) {
     var eventCircle = new Shape.Circle({
         center: [x, y],
         radius: 10,
@@ -101,8 +114,8 @@
 
       var bounds = eventTextBox.bounds;
       $textbox.css({'top': bounds.y, 'left': bounds.x, 'height': bounds.height, 'width': bounds.width})
-      $date.text('1972')
-      $textbox.text('Carmack is born.')
+      $date.text(dateString)
+      $textbox.text(messageString)
       $textbox.prepend($date)
       $textbox.show()
 
