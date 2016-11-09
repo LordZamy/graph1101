@@ -80,7 +80,7 @@
   mutualEvents.push(createEventCircle(WIDTH / 2.7, HEIGHT / 2, 220, 170, '1992', 'They change their office location to Madison, WI. They develop the game Wolfenstein 3D for Apogee Software. It became an internet sensation and set the benchmark for future 3D shooters.'))
   mutualEvents.push(createEventCircle(WIDTH / 2.25, HEIGHT / 2, 240, 180, '1993', 'The iconic Doom is developed. It used brand new programming techniques such as binary space partioning and modularity. This game set a precedent for violence in video games and a standard for 3D first person shooters.'))
   mutualEvents.push(createEventCircle(WIDTH / 2, HEIGHT / 2, 220, 170, '1994', 'DOOM II: Hell on Earth is released. The original Doom\'s multiplayer portion was improved tremendously in this release. It paved the way for the popular "deathmatch" gameplay.'))
-  mutualEvents.push(createEventCircle(WIDTH / 5, HEIGHT / 2, 200, 140, '1995', ''))
+  mutualEvents.push(createEventCircle(WIDTH / 1.7, HEIGHT / 2, 200, 140, '1995', 'Multiple expansions for Doom are released. Doom has now been ported to various platforms.'))
   /* End Mutual Stuff */
 
   var yHalfPath = new Path({
