@@ -32,6 +32,8 @@
 
   var carmackEvents = [];
   carmackEvents.push(createEventCircle(WIDTH / 12, 200, 120, 80, '1970', 'Carmack is born in Kansas.'))
+  carmackEvents.push(createEventCircle(17 * WIDTH / 120, HEIGHT / 4 + 100, 250, 140, '1983', 'Carmack, now a computer enthusiast, breaks in to a school to steal Apple II computers. He gets caught and sent to a juvenile detention home for a year. '))
+  carmackEvents.push(createEventCircle(41 * WIDTH / 240, 3 * HEIGHT / 8 + 50, 250, 140, '1988', 'Carmack makes tons of games for companies as a freelance programmer. A company called Softdisk begs him to come and work for them.'))
 
   carmackTimeline.addChild(carmackPath)
   carmackTimeline.addChildren(carmackEvents)
@@ -62,7 +64,7 @@
   var romeroEvents = []
   romeroEvents.push(createEventCircle(WIDTH / 12, HEIGHT - 200, 120, 80, '1967', 'Romero is born in Colorado.'))
   romeroEvents.push(createEventCircle(17 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 170, '1984', 'Romero is now an avid programmer who earns money and gains recognition by winning magazine sponsored game programming contests.'))
-  romeroEvents.push(createEventCircle(41 * WIDTH / 240, 5 * HEIGHT / 8 - 50, 120, 80, '1967', 'Romero is born in Colorado.'))
+  romeroEvents.push(createEventCircle(41 * WIDTH / 240, 5 * HEIGHT / 8 - 50, 200, 130, '1987', 'Romero loses his recently acquired job. His pregnant wife leaves him. A friend refers him to the company, Softdisk.'))
 
   romeroTimeline.addChild(romeroPath)
   romeroTimeline.addChildren(romeroEvents)
@@ -104,14 +106,14 @@
         center: [this.position.x + 30, this.position.y + 3],
         sides: 3,
         radius: triangleRadius,
-        fillColor: 'black'
+        fillColor: '#2c3e50'
       }).rotate(-90)
 
       eventTextBox = new Shape.Rectangle({
-        from: [eventTriangle.position.x + triangleRadius - 2, eventTriangle.position.y - height / 2],
+        from: [eventTriangle.position.x + triangleRadius - 3, eventTriangle.position.y - height / 2],
         to: [eventTriangle.position.x + triangleRadius + width, eventTriangle.position.y + height / 2],
-        fillColor: '#000000',
-        strokeColor: '#000000',
+        fillColor: '#2c3e50',
+        strokeColor: '#2c3e50',
         radius: 2
       })
 
