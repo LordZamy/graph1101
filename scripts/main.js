@@ -74,7 +74,13 @@
   /* Mutual Stuff */
   var mutualEvents = []
 
-  mutualEvents.push(createEventCircle(WIDTH / 5, HEIGHT / 2, 120, 80, '1985', 'They get together and make love.'))
+  mutualEvents.push(createEventCircle(WIDTH / 5, HEIGHT / 2, 200, 140, '1989', 'Carmack and Romero start working together at Softdisk. They form a PC game development division called Gamer\'s Edge.'))
+  mutualEvents.push(createEventCircle(WIDTH / 4, HEIGHT / 2, 220, 170, '1990', 'They create a version of Romero\'s old game, Dangerous Dave, with advanced techniques such as scrolling and adaptive tile refresh. They start making shareware games for Apogee Software.'))
+  mutualEvents.push(createEventCircle(WIDTH / 3.3, HEIGHT / 2, 200, 140, '1991', 'They leave Softdisk and start a company called id Software. Carmack researches into ways to incorporate 3D graphics into his game engines.'))
+  mutualEvents.push(createEventCircle(WIDTH / 2.7, HEIGHT / 2, 220, 170, '1992', 'They change their office location to Madison, WI. They develop the game Wolfenstein 3D for Apogee Software. It became an internet sensation and set the benchmark for future 3D shooters.'))
+  mutualEvents.push(createEventCircle(WIDTH / 2.25, HEIGHT / 2, 240, 180, '1993', 'The iconic Doom is developed. It used brand new programming techniques such as binary space partioning and modularity. This game set a precedent for violence in video games and a standard for 3D first person shooters.'))
+  mutualEvents.push(createEventCircle(WIDTH / 2, HEIGHT / 2, 220, 170, '1994', 'DOOM II: Hell on Earth is released. The original Doom\'s multiplayer portion was improved tremendously in this release. It paved the way for the popular "deathmatch" gameplay.'))
+  mutualEvents.push(createEventCircle(WIDTH / 5, HEIGHT / 2, 200, 140, '1995', ''))
   /* End Mutual Stuff */
 
   var yHalfPath = new Path({
