@@ -87,15 +87,15 @@
   mutualEvents.push(createEventCircle(4 * WIDTH / 5, HEIGHT / 2, 200, 140, '1996', 'The arena shooter Quake is released. However, during the production of Quake, Carmack makes Romero resign from the company.', true))
   /* End Mutual Stuff */
 
-  var yHalfPath = new Path({
-    segments: [[WIDTH / 2, 0], [WIDTH / 2, HEIGHT]],
-    selected: true
-  })
-
-  var xHalfPath = new Path({
-    segments: [[0, HEIGHT / 2], [WIDTH, HEIGHT / 2]],
-    selected: true
-  })
+  // var yHalfPath = new Path({
+  //   segments: [[WIDTH / 2, 0], [WIDTH / 2, HEIGHT]],
+  //   selected: true
+  // })
+  //
+  // var xHalfPath = new Path({
+  //   segments: [[0, HEIGHT / 2], [WIDTH, HEIGHT / 2]],
+  //   selected: true
+  // })
 
   var eventTriangle, eventTextBox;
   function createEventCircle(x, y, width, height, dateString, messageString, flip) {
