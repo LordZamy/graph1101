@@ -34,6 +34,7 @@
   carmackEvents.push(createEventCircle(WIDTH / 12, 200, 120, 80, '1970', 'Carmack is born in Kansas.'))
   carmackEvents.push(createEventCircle(17 * WIDTH / 120, HEIGHT / 4 + 100, 250, 140, '1983', 'Carmack, now a computer enthusiast, breaks in to a school to steal Apple II computers. He gets caught and sent to a juvenile detention home for a year. '))
   carmackEvents.push(createEventCircle(41 * WIDTH / 240, 3 * HEIGHT / 8 + 50, 250, 140, '1988', 'Carmack makes tons of games for companies as a freelance programmer. A company called Softdisk begs him to come and work for them.'))
+  carmackEvents.push(createEventCircle(11 * WIDTH / 12,  200, 250, 170, '2001', 'After enjoying incredible successes with his games, Carmack decides to pursue rocketery. He formed Armadillo Aerospace along with a few engineers. Their purpose -- to create a manned rocket ship.', true))
 
   carmackTimeline.addChild(carmackPath)
   carmackTimeline.addChildren(carmackEvents)
@@ -66,6 +67,7 @@
   romeroEvents.push(createEventCircle(17 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 170, '1984', 'Romero is now an avid programmer who earns money and gains recognition by winning magazine sponsored game programming contests.'))
   romeroEvents.push(createEventCircle(41 * WIDTH / 240, 5 * HEIGHT / 8 - 50, 200, 130, '1987', 'Romero loses his recently acquired job. His pregnant wife leaves him. A friend refers him to the company, Softdisk.'))
   romeroEvents.push(createEventCircle(103 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 150, '1997', 'Romero starts his own company called Ion Storm along with a few others from id Software. They focus on game design more than simply development.', true))
+  romeroEvents.push(createEventCircle(11 * WIDTH / 12, HEIGHT - 200, 200, 130, '2001', 'Romero leaves Ion Storm due to troubles with the publisher. He starts a small, personal company called Monkeystone Games.', true))
 
   romeroTimeline.addChild(romeroPath)
   romeroTimeline.addChildren(romeroEvents)
@@ -82,7 +84,7 @@
   mutualEvents.push(createEventCircle(WIDTH / 1.9, HEIGHT / 2, 240, 180, '1993', 'The iconic Doom is developed. It used brand new programming techniques such as binary space partioning and modularity. This game set a precedent for violence in video games and a standard for 3D first person shooters.'))
   mutualEvents.push(createEventCircle(WIDTH / 1.6, HEIGHT / 2, 220, 170, '1994', 'DOOM II: Hell on Earth is released. The original Doom\'s multiplayer portion was improved tremendously in this release. It paved the way for the popular "deathmatch" gameplay.'))
   mutualEvents.push(createEventCircle(WIDTH / 1.4, HEIGHT / 2, 200, 150, '1995', 'Multiple expansions for Doom are released. Doom has now been ported to various platforms. Carmack accuses Romero of not doing his work and threatens to fire him.'))
-  mutualEvents.push(createEventCircle(4 * WIDTH / 5, HEIGHT / 2, 200, 140, '1996', 'The arena shooter Quake is released. However, during the production of Quake, Carmack makes Romero resign from the company.'))
+  mutualEvents.push(createEventCircle(4 * WIDTH / 5, HEIGHT / 2, 200, 140, '1996', 'The arena shooter Quake is released. However, during the production of Quake, Carmack makes Romero resign from the company.', true))
   /* End Mutual Stuff */
 
   var yHalfPath = new Path({
