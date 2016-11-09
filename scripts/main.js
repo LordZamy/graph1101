@@ -65,6 +65,7 @@
   romeroEvents.push(createEventCircle(WIDTH / 12, HEIGHT - 200, 120, 80, '1967', 'Romero is born in Colorado.'))
   romeroEvents.push(createEventCircle(17 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 170, '1984', 'Romero is now an avid programmer who earns money and gains recognition by winning magazine sponsored game programming contests.'))
   romeroEvents.push(createEventCircle(41 * WIDTH / 240, 5 * HEIGHT / 8 - 50, 200, 130, '1987', 'Romero loses his recently acquired job. His pregnant wife leaves him. A friend refers him to the company, Softdisk.'))
+  romeroEvents.push(createEventCircle(103 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 150, '1997', 'Romero starts his own company called Ion Storm along with a few others from id Software. They focus on game design more than simply development.', true))
 
   romeroTimeline.addChild(romeroPath)
   romeroTimeline.addChildren(romeroEvents)
@@ -80,7 +81,7 @@
   mutualEvents.push(createEventCircle(WIDTH / 2.3, HEIGHT / 2, 220, 170, '1992', 'They change their office location to Madison, WI. They develop the game Wolfenstein 3D for Apogee Software. It became an internet sensation and set the benchmark for future 3D shooters.'))
   mutualEvents.push(createEventCircle(WIDTH / 1.9, HEIGHT / 2, 240, 180, '1993', 'The iconic Doom is developed. It used brand new programming techniques such as binary space partioning and modularity. This game set a precedent for violence in video games and a standard for 3D first person shooters.'))
   mutualEvents.push(createEventCircle(WIDTH / 1.6, HEIGHT / 2, 220, 170, '1994', 'DOOM II: Hell on Earth is released. The original Doom\'s multiplayer portion was improved tremendously in this release. It paved the way for the popular "deathmatch" gameplay.'))
-  mutualEvents.push(createEventCircle(WIDTH / 1.4, HEIGHT / 2, 200, 140, '1995', 'Multiple expansions for Doom are released. Doom has now been ported to various platforms. Carmack accuses Romero of not doing his work and threatens to fire him.'))
+  mutualEvents.push(createEventCircle(WIDTH / 1.4, HEIGHT / 2, 200, 150, '1995', 'Multiple expansions for Doom are released. Doom has now been ported to various platforms. Carmack accuses Romero of not doing his work and threatens to fire him.'))
   mutualEvents.push(createEventCircle(4 * WIDTH / 5, HEIGHT / 2, 200, 140, '1996', 'The arena shooter Quake is released. However, during the production of Quake, Carmack makes Romero resign from the company.'))
   /* End Mutual Stuff */
 
@@ -95,7 +96,7 @@
   })
 
   var eventTriangle, eventTextBox;
-  function createEventCircle(x, y, width, height, dateString, messageString) {
+  function createEventCircle(x, y, width, height, dateString, messageString, flip) {
     var eventCircle = new Shape.Circle({
         center: [x, y],
         radius: 10,
@@ -123,6 +124,13 @@
         strokeColor: '#2c3e50',
         radius: 2
       })
+
+      if (flip) {
+        eventTriangle.rotate(180)
+        eventTextBox.rotate(180, eventTriangle.position)
+        eventTriangle.translate(-60, 0)
+        eventTextBox.translate(-60, 0)
+      }
 
       var bounds = eventTextBox.bounds;
       $textbox.css({'top': bounds.y + 5, 'left': bounds.x + 5, 'height': bounds.height - 5, 'width': bounds.width - 5})
