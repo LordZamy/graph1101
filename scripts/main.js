@@ -34,6 +34,7 @@
   carmackEvents.push(createEventCircle(WIDTH / 12, 200, 120, 80, '1970', 'Carmack is born in Kansas.'))
   carmackEvents.push(createEventCircle(17 * WIDTH / 120, HEIGHT / 4 + 100, 250, 140, '1983', 'Carmack, now a computer enthusiast, breaks in to a school to steal Apple II computers. He gets caught and sent to a juvenile detention home for a year. '))
   carmackEvents.push(createEventCircle(41 * WIDTH / 240, 3 * HEIGHT / 8 + 50, 250, 140, '1988', 'Carmack makes tons of games for companies as a freelance programmer. A company called Softdisk begs him to come and work for them.'))
+  carmackEvents.push(createEventCircle(103 * WIDTH / 120, HEIGHT / 4 + 100, 240, 120, '1999', 'Carmack helps create Quake II and Quake III Arena. He slowly reduces his involvement with his giant company.', true))
   carmackEvents.push(createEventCircle(11 * WIDTH / 12,  200, 250, 170, '2001', 'After enjoying incredible successes with his games, Carmack decides to pursue rocketery. He formed Armadillo Aerospace along with a few engineers. Their purpose -- to create a manned rocket ship.', true))
 
   carmackTimeline.addChild(carmackPath)
@@ -76,7 +77,6 @@
 
   /* Mutual Stuff */
   var mutualEvents = []
-
   mutualEvents.push(createEventCircle(WIDTH / 5, HEIGHT / 2, 200, 140, '1989', 'Carmack and Romero start working together at Softdisk. They form a PC game development division called Gamer\'s Edge.'))
   mutualEvents.push(createEventCircle(WIDTH / 3.7, HEIGHT / 2, 220, 170, '1990', 'They create a version of Romero\'s old game, Dangerous Dave, with advanced techniques such as scrolling and adaptive tile refresh. They start making shareware games for Apogee Software.'))
   mutualEvents.push(createEventCircle(WIDTH / 2.9, HEIGHT / 2, 200, 140, '1991', 'They leave Softdisk and start a company called id Software. Carmack researches into ways to incorporate 3D graphics into his game engines.'))
