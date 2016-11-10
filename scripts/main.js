@@ -31,7 +31,7 @@
   })
 
   var carmackEvents = [];
-  carmackEvents.push(createEventCircle(WIDTH / 12, 200, 120, 80, '1970', 'Carmack is born in Kansas.'))
+  carmackEvents.push(createEventCircle(WIDTH / 12, 200, 120, 80, '1970', 'Carmack is born in Kansas.', false, 'carmack', WIDTH / 2, HEIGHT / 2, 1))
   carmackEvents.push(createEventCircle(17 * WIDTH / 120, HEIGHT / 4 + 100, 250, 140, '1983', 'Carmack, now a computer enthusiast, breaks in to a school to steal Apple II computers. He gets caught and sent to a juvenile detention home for a year. '))
   carmackEvents.push(createEventCircle(41 * WIDTH / 240, 3 * HEIGHT / 8 + 50, 250, 140, '1988', 'Carmack makes tons of games for companies as a freelance programmer. A company called Softdisk begs him to come and work for them.'))
   carmackEvents.push(createEventCircle(103 * WIDTH / 120, HEIGHT / 4 + 100, 240, 120, '1999', 'Carmack helps create Quake II and Quake III Arena. He slowly reduces his involvement with his giant company.', true, 'quake3', WIDTH / 2.5, HEIGHT / 2, 1))
@@ -64,7 +64,7 @@
   })
 
   var romeroEvents = []
-  romeroEvents.push(createEventCircle(WIDTH / 12, HEIGHT - 200, 120, 80, '1967', 'Romero is born in Colorado.'))
+  romeroEvents.push(createEventCircle(WIDTH / 12, HEIGHT - 200, 120, 80, '1967', 'Romero is born in Colorado.', false, 'romero', WIDTH / 2, HEIGHT / 2, 0.6))
   romeroEvents.push(createEventCircle(17 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 170, '1984', 'Romero is now an avid programmer who earns money and gains recognition by winning magazine sponsored game programming contests.'))
   romeroEvents.push(createEventCircle(41 * WIDTH / 240, 5 * HEIGHT / 8 - 50, 200, 130, '1987', 'Romero loses his recently acquired job. His pregnant wife leaves him. A friend refers him to the company, Softdisk.'))
   romeroEvents.push(createEventCircle(103 * WIDTH / 120, 3 * HEIGHT / 4 - 100, 220, 150, '1997', 'Romero starts his own company called Ion Storm along with a few others from id Software. They focus on game design more than simply development.', true, 'ionstorm', WIDTH / 2.5, HEIGHT / 2, 1))
